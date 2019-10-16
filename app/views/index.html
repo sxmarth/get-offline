@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GetOffline</title>
+    <link rel="stylesheet" href="/static/dist/app.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <meta name="og:site_name" content="Zero Width Shortener">
+    <meta property="og:title" content="Zero Width Shortener">
+    <meta property="og:url" content="https://zws.im/">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#F5F5F5">
+    <link rel="icon" href="/static/img/GetOffline.png">
+    <link rel="apple-touch-icon" href="/static/img/GetOffline.png">
+    <base href="/">
+</head>
+<body>
+
+<div class="container" id="content">
+
+    <div class="row" ng-show="$root.hasErrors" ng-cloak>
+        <div class="col col-md-8 col-md-offset-2">
+            <div class="alert alert-dismissible alert-danger">
+                <button type="button" class="close" data-dismiss="alert" ng-click="$root.hasErrors = false">×</button>
+                Something went wrong. Try again later.
+            </div>
+        </div>
+    </div>
+
+    <div class="height-100-percents" ng-view></div>
+</div>
+<div class="hidden" id="ajax-loader">
+    <div class="overlay"></div>
+    <i></i>
+</div>
+<script src="/static/dist/app.js"></script>
+</body>
+</html>
